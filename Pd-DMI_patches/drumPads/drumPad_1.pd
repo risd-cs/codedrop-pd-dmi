@@ -1,0 +1,99 @@
+#N canvas 64 22 1293 1006 10;
+#X obj 741 5 loadbang;
+#X obj 43 343 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 87 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 127 326 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 166 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 250 428 s3g_triggerplay~ tp2;
+#X obj 94 428 s3g_triggerplay~ tp1;
+#X obj 406 428 s3g_triggerplay~ tp3;
+#X obj 562 428 s3g_triggerplay~ tp4;
+#X msg 742 245 \; tp4 /read ./sounds/bossdr550mk2/HiHatCl1.wav \; tp4
+/speed 1 \; tp4 /vol 0.4;
+#X msg 810 577 \; tp3 /speed \$1;
+#X floatatom 810 552 5 0 0 0 - - -;
+#X obj 810 433 random 10;
+#X obj 810 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 810 465 5 0 0 0 - - -;
+#X obj 810 489 + 1;
+#X msg 742 124 \; tp2 /read ./sounds/bossdr550mk2/Kick3.wav \; tp2
+/speed 0.4 \; tp2 /vol 0.4;
+#X obj 810 517 * 0.1;
+#X msg 742 185 \; tp3 /read ./sounds/bossdr550mk2/HiHatOp1.wav \; tp3
+/speed 0.9 \; tp3 /vol 0.5;
+#X floatatom 912 550 5 0 0 0 - - -;
+#X obj 912 431 random 10;
+#X obj 912 410 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 912 463 5 0 0 0 - - -;
+#X obj 912 487 + 1;
+#X msg 912 575 \; tp4 /speed \$1;
+#X obj 912 515 * 0.2;
+#X floatatom 1014 548 5 0 0 0 - - -;
+#X obj 1014 429 random 10;
+#X obj 1014 408 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 1014 461 5 0 0 0 - - -;
+#X obj 1014 485 + 1;
+#X msg 1014 573 \; tp1 /speed \$1;
+#X msg 742 62 \; tp1 /read ./sounds/bossdr550mk2/HiHatCl2.wav \; tp1
+/speed 1 \; tp1 /vol 0.8;
+#X obj 1014 513 * 0.09;
+#X obj 742 26 t b b b b;
+#X obj 309 807 dac~;
+#X msg -14 617 \; pd dsp \$1;
+#X obj -14 580 tgl 30 0 empty empty dsp 33 7 0 10 -204786 -1 -1 1 1
+;
+#X obj 15 197 key;
+#X floatatom 17 225 5 0 0 0 - - -;
+#X obj 60 264 select 113 119 101 114;
+#X connect 0 0 34 0;
+#X connect 1 0 6 0;
+#X connect 1 0 28 0;
+#X connect 2 0 5 0;
+#X connect 3 0 7 0;
+#X connect 3 0 13 0;
+#X connect 4 0 8 0;
+#X connect 4 0 21 0;
+#X connect 5 0 35 0;
+#X connect 5 0 35 1;
+#X connect 6 0 35 0;
+#X connect 6 0 35 1;
+#X connect 7 0 35 0;
+#X connect 7 0 35 1;
+#X connect 8 0 35 0;
+#X connect 8 0 35 1;
+#X connect 11 0 10 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 15 0 17 0;
+#X connect 17 0 11 0;
+#X connect 19 0 24 0;
+#X connect 20 0 22 0;
+#X connect 21 0 20 0;
+#X connect 22 0 23 0;
+#X connect 23 0 25 0;
+#X connect 25 0 19 0;
+#X connect 26 0 31 0;
+#X connect 27 0 29 0;
+#X connect 28 0 27 0;
+#X connect 29 0 30 0;
+#X connect 30 0 33 0;
+#X connect 33 0 26 0;
+#X connect 34 0 32 0;
+#X connect 34 1 16 0;
+#X connect 34 2 18 0;
+#X connect 34 3 9 0;
+#X connect 37 0 36 0;
+#X connect 38 0 39 0;
+#X connect 39 0 40 0;
+#X connect 40 0 1 0;
+#X connect 40 1 2 0;
+#X connect 40 2 3 0;
+#X connect 40 3 4 0;
