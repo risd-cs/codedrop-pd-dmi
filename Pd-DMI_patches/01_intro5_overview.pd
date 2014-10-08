@@ -1,0 +1,19 @@
+#N canvas 156 22 1379 935 24;
+#X text 99 61 OVERVIEW FOR WORKSHOP;
+#X text 429 62 "An instrument that uses computer-generated sound can
+be called a digital music instrument (DMI) and consists of a control
+surface or gestural controller \, which drives the musical parameters
+of a sound synthesizer in real time." (Miranda and Wanderley. 2006
+New Digital Musical Instruments. A-R Editions \, Inc.);
+#X text 737 659 Part 4: Open experimentation time \; (30+ min.);
+#X text 228 253 This workshop will be a fast introduction to DMI design.
+We'll be building a fairly simple synthesizer and electronic circuits
+that will let us map gestural control to changes in sound.;
+#X text 270 388 Part 1: Up and running with Pd \, building a synthesizer
+\; (~30 min.);
+#X text 454 466 Part 2: Livid board overview \, connecting buttons
+\, pots \, sensors \, LEDs \; (15 min.);
+#X text 586 565 Part 3: Putting the two together with MIDI + extras
+and other directions \; (15 min.);
+#X obj 74 758 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;

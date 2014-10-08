@@ -1,0 +1,78 @@
+#N canvas 3 29 1655 956 24;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array waveform_array 2051 float 0;
+#X coords 0 1 2050 -1 200 140 1;
+#X restore 342 421 graph;
+#X msg 86 395 \; pd dsp \$1;
+#X obj 86 347 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 229 429 dac~;
+#N canvas 0 22 771 392 vol 0;
+#X obj 110 220 outlet~;
+#X obj 96 36 inlet~;
+#X obj 180 36 inlet;
+#X obj 110 167 *~;
+#X obj 140 133 line~;
+#X msg 140 101 \$1 100;
+#X connect 1 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X restore 229 351 pd vol;
+#X floatatom 292 318 5 0 1 0 - - -;
+#X obj 295 270 hsl 128 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2500 1;
+#X text 435 274 volume;
+#X obj 233 -18 hsl 128 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3000 1;
+#X text 368 -16 frequency;
+#X text 47 -114 using sinesum messages to generate wavetables;
+#X obj 230 154 phasor~;
+#X obj 230 235 tabread4~ waveform_array;
+#X obj 230 194 *~ 2051;
+#X floatatom 230 23 5 0 0 0 - - -;
+#X floatatom 337 60 5 0 0 0 - - -;
+#X obj 230 92 pack f 200;
+#X obj 230 123 sig~;
+#X obj 230 60 * 2000;
+#X msg 607 -25 \; waveform_array sinesum 2051 1 0.5 0.33 0.25 \; waveform_array
+normalize 1 \;;
+#X msg 656 -111 \; waveform_array sinesum 2051 1 \; waveform_array
+normalize 1 \;;
+#X msg 565 68 \; waveform_array sinesum 2051 1 0.5 0.333333 0.25 0.2
+0.166667 0.142857 0.125 0.111111 0.1 0.090909 0.083333 0.076923 \;
+waveform_array normalize 1 \;;
+#X msg 624 211 \; waveform_array sinesum 2051 1 0 -0.1 0 \; waveform_array
+normalize 1 \;;
+#X msg 574 312 \; waveform_array sinesum 2051 1 0 -0.111111 0.04 0
+-0.0204082 0 0.0123457 0 -0.00826446 0 \; waveform_array normalize
+1 \;;
+#X msg 582 430 \; waveform_array sinesum 2051 1 0 0.5 0 \; waveform_array
+normalize 1 \;;
+#X msg 574 529 \; waveform_array sinesum 2051 1 0 0.333333 0 0.2 0
+0.142857 0 0.111111 0 0.090909 0 0.076923 \; waveform_array normalize
+1 \;;
+#X text 1004 -90 <- sine wave;
+#X text 1253 345 <- triangle wave (12 harmonics);
+#X text 1181 106 <- saw wave (12 harmonics);
+#X text 1114 -8 <- saw wave (4 harmonics);
+#X text 1071 233 <- triangle wave (4 harmonics);
+#X text 1021 454 <- square wave (4 harmonics);
+#X text 1241 562 <- square wave (12 harmonics);
+#X obj 197 743 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
+#X connect 2 0 1 0;
+#X connect 4 0 3 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 1;
+#X connect 6 0 5 0;
+#X connect 8 0 14 0;
+#X connect 11 0 13 0;
+#X connect 12 0 4 0;
+#X connect 13 0 12 0;
+#X connect 14 0 18 0;
+#X connect 15 0 16 1;
+#X connect 16 0 17 0;
+#X connect 17 0 11 0;
+#X connect 18 0 16 0;

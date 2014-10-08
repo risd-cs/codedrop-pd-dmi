@@ -1,0 +1,77 @@
+#N canvas 166 56 1413 966 24;
+#X obj 375 639 dac~;
+#X msg 85 409 \; pd dsp \$1;
+#X obj 85 364 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 126 361 <- turn on sound;
+#X obj 756 496 line~;
+#X obj 375 550 *~;
+#X obj 756 454 pack f 20;
+#X floatatom 756 421 5 0 0 0 - - -;
+#X obj 374 311 line~;
+#X floatatom 374 204 5 0 0 0 - - -;
+#X obj 377 167 hsl 200 30 0 1 0 0 empty empty frequency -2 -8 0 10
+-262144 -1 -1 8200 1;
+#X obj 374 237 * 1000;
+#X floatatom 481 237 5 0 0 1 glide - -;
+#X obj 374 269 pack f 200;
+#X floatatom 852 422 5 0 0 1 ramp - -;
+#X obj 374 351 phasor~ 440;
+#X obj 374 388 *~ 2;
+#X obj 374 424 -~ 1;
+#X obj 374 471 clip~ -0.6 0.35;
+#X floatatom 813 241 5 0 0 0 - - -;
+#X floatatom 1022 193 5 0 0 0 - - -;
+#N canvas 0 22 1001 639 array_viz 1;
+#X obj 231 235 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array phasormod_array 100 float 0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 569 169 graph;
+#X text 255 234 graph;
+#X obj 231 204 metro 100;
+#X obj 109 196 inlet~;
+#X obj 231 278 tabwrite~ phasormod_array;
+#X obj 231 143 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X connect 0 0 5 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 6 0 3 0;
+#X restore 523 607 pd array_viz;
+#X obj 141 843 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
+#X obj 759 378 hsl 200 30 0 1 0 0 empty empty volume -2 -8 0 10 -262144
+-1 -1 3200 1;
+#X obj 816 155 hsl 200 30 -1 0 0 0 empty empty -1-0 -2 -8 0 10 -262144
+-1 -1 7700 1;
+#X obj 1025 155 hsl 200 30 0 1 0 0 empty empty 0-1 -2 -8 0 10 -262144
+-1 -1 19900 1;
+#X text 46 26 GETTING OTHER WAVEFORM TYPES - A stronger phasor~. now
+with clip~ added. You can sculpt the waveform a bit this way limiting
+the range for the peaks and troughs. Notice as they both approach 0
+\, the waveform has no volume.;
+#X connect 2 0 1 0;
+#X connect 4 0 5 1;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 15 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 1;
+#X connect 13 0 8 0;
+#X connect 14 0 6 1;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 5 0;
+#X connect 18 0 21 0;
+#X connect 19 0 18 1;
+#X connect 20 0 18 2;
+#X connect 23 0 7 0;
+#X connect 24 0 19 0;
+#X connect 25 0 20 0;

@@ -1,0 +1,27 @@
+#N canvas 107 71 1331 651 24;
+#X obj 606 236 pddp/pddplink http://puredata.info/;
+#X obj 708 268 pddp/pddplink http://puredata.info/community/lists;
+#X obj 529 455 pddp/pddplink http://crca.ucsd.edu/~msp/Pd_documentation/
+;
+#X obj 591 484 pddp/pddplink http://crca.ucsd.edu/~msp/techniques.htm
+;
+#X obj 263 398 pddp/pddplink http://en.flossmanuals.net/PureData/;
+#X obj 547 427 pddp/pddplink http://en.flossmanuals.net/pure-data/ch072_introduction/
+;
+#X text 133 455 Miller Puckette's online documentation:;
+#X text 133 484 The Theory and Technique of Electronic Music:;
+#X text 131 398 FLOSS manual:;
+#X text 131 427 FLOSS manual object list for Pd-extended:;
+#X text 146 48 Learning more:;
+#X text 139 113 I highly recommend Andy Farnell's book Designing Sound:
+;
+#X obj 694 113 pddp/pddplink http://mitpress.mit.edu/books/designing-sound
+;
+#X obj 847 147 pddp/pddplink http://www.pd-tutorial.com/;
+#X text 491 147 Programming Electronic Music in Pd:;
+#X text 139 147 Also great is the free online text \,;
+#X text 361 235 The primary resource is:;
+#X text 361 268 Sign up for discussion lists here:;
+#X text 153 357 Also worth checking out:;
+#X obj 696 577 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;

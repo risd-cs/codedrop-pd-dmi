@@ -1,0 +1,35 @@
+#N canvas 41 22 1409 945 24;
+#X obj 340 725 dac~;
+#X msg 53 130 \; pd dsp \$1;
+#X obj 53 78 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 340 171 osc~ 440;
+#X obj 340 491 *~ 0.5;
+#X floatatom 340 115 5 0 0 0 - - -;
+#X floatatom 403 292 5 0 0 0 - - -;
+#X obj 403 361 clip 0 1;
+#X floatatom 403 415 5 0 0 0 - - -;
+#X text 503 360 <- using clip to make sure values stay in the 0 to
+1 range;
+#X text 443 171 <- osc~ generates a sine wave. The argument specifies
+it's initial frequency.;
+#X text 482 286 <- shift \, click \, and drag to change values after
+decimal place. values for volume should only be 0 to 1;
+#X text 93 78 <- turn on sound;
+#X text 418 113 <- you may adjust the frequency of the oscillator;
+#X text 404 723 <- sound sent out to both speakers (2-channel or stereo)
+;
+#X obj 134 827 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
+#X text 428 486 <- the *~ object enables you to scale the signal -
+very useful for creating a volume control. Here it is first instantiated
+with 0.5 (cutting the volume in half). Numbers coming in the second
+inlet change the value.;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 4 1;

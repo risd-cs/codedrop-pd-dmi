@@ -1,0 +1,957 @@
+#N canvas 405 40 1068 957 24;
+#N canvas 117 22 1401 945 print 0;
+#X obj 41 186 print;
+#X msg 41 139 any message;
+#X obj 41 70 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 128 64 <- notice that bang tells the message box to pass its
+message;
+#X msg 197 138 any other message;
+#X obj 432 346 print;
+#X msg 432 267 22;
+#X msg 483 267 100;
+#X msg 432 311 A message can have numeric variables \$1;
+#X msg 539 267 1000;
+#X msg 606 267 orange;
+#X text 694 267 <- notice the error when orange is passed;
+#X obj 39 598 print;
+#X msg 39 477 orange;
+#X obj 39 527 tosymbol;
+#X obj 341 851 print;
+#X msg 125 478 orange and watermelon;
+#X msg 341 752 40 20 1000;
+#X msg 475 752 90 303 4004;
+#X msg 341 794 A message can print to different lines \, with a comma
+\, that's great \, \$1 \, \$2 \, \$3;
+#X obj 716 580 print;
+#X msg 716 481 list orange and watermelon;
+#X msg 716 545 A message can have list variables \$1 \$2 \$3;
+#X text 155 524 <- this is how we get around that previous error or
+->;
+#X msg 39 563 A message can have symbol variables \$1;
+#X obj 418 246 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 29 460 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 326 731 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 4 0 0 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 13 0 14 0;
+#X connect 14 0 24 0;
+#X connect 16 0 14 0;
+#X connect 17 0 19 0;
+#X connect 18 0 19 0;
+#X connect 19 0 15 0;
+#X connect 21 0 22 0;
+#X connect 22 0 20 0;
+#X connect 24 0 12 0;
+#X restore 126 207 pd print;
+#N canvas 17 22 1530 885 pack_unpack 0;
+#X obj 187 136 prepend set;
+#X msg 187 182 maybe 340 boring 11111;
+#X obj 80 86 pack s f s f;
+#X msg 80 27 Working 100 lists 400;
+#X obj 81 244 unpack s f s f;
+#X floatatom 202 373 5 0 0 0 - - -;
+#X floatatom 390 311 5 0 0 0 - - -;
+#X obj 313 360 prepend set;
+#X msg 313 407 boring;
+#X obj 39 324 prepend set;
+#X msg 39 371 maybe;
+#X msg 353 28 maybe 340 boring 11111;
+#X text 272 223 <- pack and unpack allow you to form and break apart
+lists and messages;
+#X obj 401 722 line;
+#X floatatom 401 775 10 0 0 0 - - -;
+#X floatatom 381 612 5 0 0 0 - - -;
+#X obj 401 671 pack f 500;
+#X msg 451 612 50.4;
+#X msg 514 612 2000.33;
+#X obj 152 511 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 224 523 Here's a very pratical usage of pack with the line
+object to create a smooth transition between numbers:;
+#X floatatom 631 613 5 0 0 0 - - -;
+#X obj 900 98 pack f f f f;
+#X floatatom 900 50 5 0 0 0 - - -;
+#X floatatom 973 50 5 0 0 0 - - -;
+#X floatatom 1043 50 5 0 0 0 - - -;
+#X floatatom 1112 50 5 0 0 0 - - -;
+#X msg 900 168 -11 20 13 41;
+#X obj 900 332 unpack f f f f;
+#X floatatom 879 365 5 0 0 0 - - -;
+#X floatatom 945 366 5 0 0 0 - - -;
+#X floatatom 1008 366 5 0 0 0 - - -;
+#X floatatom 1072 366 5 0 0 0 - - -;
+#X text 1069 166 <- click message box to send to unpack;
+#X obj 900 134 prepend set;
+#X text 746 629 IMPORTANT!!!!!!!!!!!!!!!!!!!!!! Notice how operations
+in Pd go from right to left. If you change the rightmost inlet of pack
+\, not until you change the value in the leftmost inlet is there an
+output.;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 9 0;
+#X connect 4 1 5 0;
+#X connect 4 2 7 0;
+#X connect 4 3 6 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 11 0 2 0;
+#X connect 13 0 14 0;
+#X connect 15 0 16 0;
+#X connect 16 0 13 0;
+#X connect 17 0 16 0;
+#X connect 18 0 16 0;
+#X connect 21 0 16 1;
+#X connect 22 0 34 0;
+#X connect 23 0 22 0;
+#X connect 24 0 22 1;
+#X connect 25 0 22 2;
+#X connect 26 0 22 3;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 28 1 30 0;
+#X connect 28 2 31 0;
+#X connect 28 3 32 0;
+#X connect 34 0 27 0;
+#X restore 126 267 pd pack_unpack;
+#N canvas 29 22 1473 940 zl 0;
+#X obj 68 225 zl rev;
+#X obj 68 270 prepend set;
+#X msg 68 310 moon the over jumped cow the;
+#X msg 34 146 the cow jumped over the moon;
+#X msg 80 185 gimme gimme gimme some more;
+#X text 162 230 <- reverses the list;
+#X obj 627 306 prepend set;
+#X msg 627 350 6;
+#X msg 626 183 the cow jumped over the moon;
+#X msg 639 218 gimme gimme gimme some more;
+#X obj 627 258 zl len;
+#X text 715 256 <- report the length of a list;
+#X obj 922 570 prepend set;
+#X msg 921 651 the cow jumped;
+#X msg 884 406 the cow jumped over the moon;
+#X msg 978 447 gimme gimme gimme some more;
+#X obj 922 493 zl slice 3;
+#X text 1060 490 <- slice a list;
+#X obj 1072 570 prepend set;
+#X msg 1102 618 over the moon;
+#X obj 225 687 prepend set;
+#X msg 225 733 the moon;
+#X msg 139 548 the cow jumped over the moon;
+#X text 338 653 <- output what is common in both lists;
+#X obj 225 647 zl sect;
+#X msg 240 586 where is the moon;
+#X msg 346 617 did you see a cow;
+#X text 250 17 The zl object in Pd-extended is very handy for list
+processing. zl stands for Zicarelli's List object \, named for David
+Zicarelli of Cycling '74 (the company that produces Max/MSP). Here's
+just a few examples. The creation argument tells zl how to parse the
+list.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 6 0 7 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X connect 12 0 13 0;
+#X connect 14 0 16 0;
+#X connect 15 0 16 0;
+#X connect 16 0 12 0;
+#X connect 16 1 18 0;
+#X connect 18 0 19 0;
+#X connect 20 0 21 0;
+#X connect 22 0 24 0;
+#X connect 24 0 20 0;
+#X connect 25 0 24 1;
+#X connect 26 0 24 1;
+#X restore 126 297 pd zl;
+#N canvas 47 56 1347 781 coll 0;
+#X obj 489 383 coll;
+#C restore;
+#X obj 511 233 metro 500;
+#X obj 511 195 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 511 271 counter 0 1 4;
+#X floatatom 511 309 5 0 0 0 - - -;
+#X obj 489 421 unpack s s;
+#X obj 441 503 prepend set;
+#X msg 441 542 one;
+#X obj 643 505 prepend set;
+#X msg 643 543 unu;
+#X text 530 67 messages for storing data in a coll (collection) need
+a number for the index followed by the data to place at that index.
+click on the coll to see contents.;
+#X text 183 70 Now we put a few things together:;
+#X text 574 195 <- toggle \, turns on/off the metro;
+#X text 631 232 <- metro will bang every 500 ms;
+#X text 675 268 <- metro tells counter to count up (the first argument
+of 0) \, and to count between 1 and 4 (the next two arguments);
+#X text 548 358 by sending a number alone to the coll we ask it for
+the data at that index;
+#X text 628 420 <- we use unpack to break apart the message into two
+symbols;
+#X msg 346 229 4 four kvar;
+#X msg 260 186 3 three tri;
+#X msg 147 166 2 two du;
+#X msg 17 151 1 one unu;
+#X connect 0 0 5 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 5 1 8 0;
+#X connect 6 0 7 0;
+#X connect 8 0 9 0;
+#X connect 17 0 0 0;
+#X connect 18 0 0 0;
+#X connect 19 0 0 0;
+#X connect 20 0 0 0;
+#X restore 126 327 pd coll;
+#X text 124 177 Working with messages and lists;
+#N canvas 58 22 1485 928 prepend 0;
+#X msg 74 329 A message can have list variables: lemon and honeydew
+;
+#X obj 74 291 prepend set;
+#X text 239 269 <- we can create a new message with the object prepend
+and the argument of set;
+#X obj 74 92 prepend list;
+#X msg 357 22 orange and watermelon;
+#X msg 48 18 lemon and honeydew;
+#X text 247 82 <- we can tell a message to process a list with the
+object prepend and the argument of list;
+#X msg 669 32 nothing or something;
+#X msg 74 170 A message can have list variables: \$1 \$2 \$3;
+#X obj 188 487 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X msg 220 837 lemons have a lot of vitamins;
+#X obj 220 799 prepend set;
+#X msg 220 526 have a lot of vitamins;
+#X obj 220 754 prepend fruits;
+#X msg 685 612 oranges;
+#X msg 923 612 lemons;
+#X msg 798 612 apples;
+#X msg 488 528 set grapes;
+#X text 757 524 <- a message with set at the beginning changes what
+is prepended;
+#X msg 626 529 set scones;
+#X text 590 161 This demonstrates that certain words (like list and
+set) are parsed differently when they are the 1st item sent to a message
+inlet. They are not variables \, but instructions.;
+#X obj 686 667 prepend set;
+#X connect 1 0 0 0;
+#X connect 3 0 8 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 7 0 3 0;
+#X connect 8 0 1 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 14 0 21 0;
+#X connect 15 0 21 0;
+#X connect 16 0 21 0;
+#X connect 17 0 13 0;
+#X connect 19 0 13 0;
+#X connect 21 0 13 0;
+#X restore 126 237 pd prepend;
+#N canvas 174 22 1559 926 trigger 0;
+#X obj 547 171 print A;
+#X obj 438 190 print B;
+#X obj 346 192 print C;
+#X obj 250 194 print D;
+#X obj 39 121 trigger bang float symbol list anything;
+#X msg 39 75 20 40 50;
+#X obj 445 354 print A;
+#X obj 312 366 print B;
+#X obj 189 367 print C;
+#X obj 98 398 print D;
+#X msg 38 230 20 40 50;
+#X text 203 272 <- you can abbreviate trigger and its arguments;
+#X obj 38 276 t b f s l a;
+#X obj 324 711 spigot;
+#X msg 389 585 1;
+#X obj 333 549 t b f b;
+#X floatatom 293 501 5 0 0 0 - - -;
+#X msg 315 588 0;
+#X floatatom 524 512 5 0 0 0 - - -;
+#X floatatom 324 744 5 0 0 0 - - -;
+#X text 359 500 <- this passes;
+#X text 596 509 <- this doesn't pass;
+#X obj 273 466 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 136 186 print E;
+#X obj 9 372 print E;
+#X text 780 65 trigger sends its input to many places in right-to-left
+order. It is very useful when you need precise control over where and
+when data is passed. Check out the Pd window (print window) to see
+proof on the order of data (rather than E - A as suggested by a left-to-right
+reading \, it is indeed right-to-left). The order of operations in
+Pd is always right-to-left when dealing within the inlets/outlets of
+individual objects \, yet the order of operations amongst independent
+objects is related to when those objects were instantiated (huh? yes
+\, hard to keep track of)... thus trigger addresses the need to make
+sure data flows as you'd like it to.;
+#X connect 4 0 23 0;
+#X connect 4 1 3 0;
+#X connect 4 2 2 0;
+#X connect 4 3 1 0;
+#X connect 4 4 0 0;
+#X connect 5 0 4 0;
+#X connect 10 0 12 0;
+#X connect 12 0 24 0;
+#X connect 12 1 9 0;
+#X connect 12 2 8 0;
+#X connect 12 3 7 0;
+#X connect 12 4 6 0;
+#X connect 13 0 19 0;
+#X connect 14 0 13 1;
+#X connect 15 0 17 0;
+#X connect 15 1 13 0;
+#X connect 15 2 14 0;
+#X connect 16 0 15 0;
+#X connect 17 0 13 1;
+#X connect 18 0 13 0;
+#X restore 602 209 pd trigger;
+#X text 599 180 Trigger;
+#N canvas 132 29 1388 832 integers_vs_floats 0;
+#X floatatom 127 103 5 0 0 0 - - -;
+#X floatatom 511 262 20 0 0 0 - - -;
+#X text 747 220 <- number boxes can be made wider to accomodate larger
+numbers or those with more precision. To make a number box larger \,
+right click and select Properties;
+#X msg 511 219 10.4837;
+#X msg 612 220 12233.2;
+#X obj 389 469 int;
+#X floatatom 389 425 5 0 0 0 - - -;
+#X floatatom 389 517 10 0 0 0 - - -;
+#X msg 398 367 10.55;
+#X msg 490 360 10.75;
+#X msg 561 392 11.05;
+#X msg 321 374 10.35;
+#X text 642 456 <- int stands for integer. Here it is used to round
+a float to a whole number (notice that it rounds down);
+#X obj 234 677 int 33;
+#X floatatom 297 612 5 0 0 0 - - -;
+#X obj 234 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 234 717 5 0 0 0 - - -;
+#X floatatom 448 647 5 0 0 0 - - -;
+#X obj 341 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 341 717 5 0 0 0 - - -;
+#X obj 341 677 float 33.3;
+#X text 593 668 <- the int and float objects can be used to store numbers
+for later output;
+#X text 352 -16 As a general rule \, Pd works with floating point numbers
+(those with decimal places) though it is possible to work with integers
+(whole numbers) as well.;
+#X text 204 95 <- to see decimal places in a number box \, you must
+shift \, click and drag. Otherwise you will only change values before
+the decimal place. You can also type in a number and hit enter to change.
+;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 11 0 6 0;
+#X connect 13 0 16 0;
+#X connect 14 0 13 1;
+#X connect 15 0 13 0;
+#X connect 17 0 20 1;
+#X connect 18 0 20 0;
+#X connect 20 0 19 0;
+#X restore 126 453 pd integers_vs_floats;
+#N canvas 53 22 1543 854 arithmetic 0;
+#X obj 31 137 +;
+#X floatatom 106 76 5 0 0 0 - - -;
+#X floatatom 30 76 5 0 0 0 - - -;
+#X text 168 7 Remember Pd works right to left. A change in the left
+inlet will cause the calculation to complete.;
+#X floatatom 31 179 5 0 0 0 - - -;
+#X floatatom 721 83 5 0 0 0 - - -;
+#X floatatom 722 186 5 0 0 0 - - -;
+#X obj 722 144 + 5;
+#X floatatom 621 83 5 0 0 0 - - -;
+#X floatatom 622 186 5 0 0 0 - - -;
+#X obj 622 144 + 5.6;
+#X floatatom 800 83 5 0 0 0 - - -;
+#X text 806 143 <- with a creation argument which can be overridden
+with a change in the right inlet;
+#X floatatom 113 242 5 0 0 0 - - -;
+#X floatatom 29 242 5 0 0 0 - - -;
+#X floatatom 30 345 5 0 0 0 - - -;
+#X obj 30 303 -;
+#X floatatom 107 414 5 0 0 0 - - -;
+#X floatatom 30 414 5 0 0 0 - - -;
+#X floatatom 31 517 5 0 0 0 - - -;
+#X text 76 302 <- subtraction;
+#X text 76 136 <- addition \, without a creation argument;
+#X text 76 474 <- multiplication;
+#X obj 31 475 *;
+#X floatatom 110 596 5 0 0 0 - - -;
+#X floatatom 31 596 5 0 0 0 - - -;
+#X floatatom 32 699 5 0 0 0 - - -;
+#X obj 32 657 /;
+#X text 77 656 <- division;
+#X floatatom 754 298 5 0 0 0 - - -;
+#X floatatom 754 373 5 0 0 0 - - -;
+#X obj 754 333 expr ($f1 - 32) * 5/9;
+#X floatatom 754 446 5 0 0 0 - - -;
+#X obj 754 411 expr (1.8 * $f1) + 32;
+#X text 909 363 <- expressions (for instance fahrenheit to celsius
+conversion);
+#X obj 765 647 + 1;
+#X floatatom 739 702 0 0 0 0 - - -;
+#X obj 687 632 f 1;
+#X msg 725 583 1;
+#X obj 687 583 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 772 583 <- reset;
+#X text 829 630 <- a counter made with addition;
+#X obj 687 663 t f f;
+#X connect 0 0 4 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 8 0 10 0;
+#X connect 10 0 9 0;
+#X connect 11 0 7 1;
+#X connect 13 0 16 1;
+#X connect 14 0 16 0;
+#X connect 16 0 15 0;
+#X connect 17 0 23 1;
+#X connect 18 0 23 0;
+#X connect 23 0 19 0;
+#X connect 24 0 27 1;
+#X connect 25 0 27 0;
+#X connect 27 0 26 0;
+#X connect 29 0 31 0;
+#X connect 30 0 33 0;
+#X connect 31 0 30 0;
+#X connect 33 0 32 0;
+#X connect 35 0 37 1;
+#X connect 37 0 42 0;
+#X connect 38 0 37 1;
+#X connect 39 0 37 0;
+#X connect 42 0 35 0;
+#X connect 42 1 36 0;
+#X restore 126 483 pd arithmetic;
+#N canvas 34 22 1564 1001 relational 0;
+#X floatatom 21 17 5 0 0 0 - - -;
+#X floatatom 108 24 5 0 0 0 - - -;
+#X obj 43 93 ==;
+#X floatatom 43 131 5 0 0 0 - - -;
+#X text 90 92 <- are the numbers equal?;
+#X obj 43 168 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 91 164 <- toggle can take 1 or 0 as well as output 1 or 0;
+#X floatatom 382 30 5 0 0 0 - - -;
+#X floatatom 474 28 5 0 0 0 - - -;
+#X floatatom 413 133 5 0 0 0 - - -;
+#X text 478 130 <- 1 = true \, 0 = false;
+#X obj 413 95 !=;
+#X text 460 94 <- are the numbers not equal?;
+#X floatatom 247 270 5 0 0 0 - - -;
+#X floatatom 332 266 5 0 0 0 - - -;
+#X floatatom 247 359 5 0 0 0 - - -;
+#X text 312 357 <- 1 = true \, 0 = false;
+#X obj 247 321 >;
+#X text 304 320 <- is left input greater than right?;
+#X obj 213 252 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 212 452 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 326 646 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X floatatom 734 272 5 0 0 0 - - -;
+#X floatatom 818 270 5 0 0 0 - - -;
+#X floatatom 734 361 5 0 0 0 - - -;
+#X text 807 359 <- 1 = true \, 0 = false;
+#X obj 734 323 <;
+#X text 807 322 <- is left input less than right?;
+#X obj 825 44 >;
+#X obj 870 44 >=;
+#X obj 917 43 ==;
+#X obj 1010 43 <=;
+#X obj 1056 43 <;
+#X obj 962 43 !=;
+#X text 824 16 THE RELATIONAL OPERATORS;
+#X obj 1101 43 mod;
+#X obj 1150 43 div;
+#X floatatom 161 470 5 0 0 0 - - -;
+#X floatatom 161 559 5 0 0 0 - - -;
+#X obj 161 521 mod 10;
+#X text 244 520 <- mod divides by argument and outputs remainder;
+#X obj 377 736 metro 500;
+#X obj 344 686 tgl 30 0 empty empty Start-Stop 0 -6 0 8 -262144 -1
+-1 0 1;
+#X obj 504 778 + 1;
+#X floatatom 381 818 0 0 0 0 - - -;
+#X text 204 817 Total Beat Count;
+#X obj 362 868 div 4;
+#X obj 641 868 mod 4;
+#X floatatom 641 937 0 0 0 0 - - -;
+#X floatatom 362 937 0 0 0 0 - - -;
+#X obj 381 778 f 1;
+#X msg 610 719 1;
+#X obj 362 906 + 1;
+#X obj 641 906 + 1;
+#X text 658 719 Reset;
+#X text 251 936 Bar number;
+#X text 520 936 Beat Count;
+#X floatatom 989 739 0 0 0 0 - - -;
+#X text 751 738 How many beats per bar?;
+#X floatatom 748 472 5 0 0 0 - - -;
+#X floatatom 748 561 5 0 0 0 - - -;
+#X obj 748 523 div 10;
+#X text 829 521 <- div divides by argument and outputs without remainder
+;
+#X text 813 824 <- using div and mod for a 4/4 musical metronome (taken
+from the otherbinops-help.pd patch included in Pd-extended);
+#X text 113 129 <- 1 = true \, 0 = false;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 11 1;
+#X connect 11 0 9 0;
+#X connect 13 0 17 0;
+#X connect 14 0 17 1;
+#X connect 17 0 15 0;
+#X connect 22 0 26 0;
+#X connect 23 0 26 1;
+#X connect 26 0 24 0;
+#X connect 37 0 39 0;
+#X connect 39 0 38 0;
+#X connect 41 0 50 0;
+#X connect 42 0 41 0;
+#X connect 43 0 50 1;
+#X connect 44 0 46 0;
+#X connect 44 0 47 0;
+#X connect 46 0 52 0;
+#X connect 47 0 53 0;
+#X connect 50 0 43 0;
+#X connect 50 0 44 0;
+#X connect 51 0 50 1;
+#X connect 52 0 49 0;
+#X connect 53 0 48 0;
+#X connect 57 0 47 1;
+#X connect 57 0 46 1;
+#X connect 59 0 61 0;
+#X connect 61 0 60 0;
+#X restore 126 513 pd relational;
+#N canvas 95 44 1301 709 logic 0;
+#X obj 815 78 &;
+#X obj 861 78 |;
+#X obj 995 78 &&;
+#X obj 1040 78 ||;
+#X obj 906 78 <<;
+#X obj 950 78 >>;
+#X obj 1085 78 %;
+#X text 813 55 THE LOGICAL OPERATORS;
+#X obj 112 124 &&;
+#X floatatom 105 83 5 0 0 0 - - -;
+#X floatatom 184 77 5 0 0 0 - - -;
+#X floatatom 128 168 5 0 0 0 - - -;
+#X obj 128 214 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 336 426 5 0 0 0 - - -;
+#X floatatom 436 429 5 0 0 0 - - -;
+#X floatatom 374 523 5 0 0 0 - - -;
+#X obj 374 472 ||;
+#X text 495 453 <- logical OR \, outputs 0 when both left and right
+values are zero (remember right-to-left operation);
+#X text 213 124 <- logical AND \, outputs 1 if left and right values
+are non-zero (remember right-to-left operation);
+#X obj 91 30 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 154 34 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 358 359 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 413 369 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 375 582 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 12 0;
+#X connect 13 0 16 0;
+#X connect 14 0 16 1;
+#X connect 15 0 23 0;
+#X connect 16 0 15 0;
+#X connect 19 0 9 0;
+#X connect 20 0 10 0;
+#X connect 21 0 13 0;
+#X connect 22 0 14 0;
+#X restore 126 543 pd logic;
+#N canvas 102 62 1164 837 random 0;
+#X obj 63 108 random 4;
+#X obj 63 72 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 63 157 5 0 0 0 - - -;
+#X obj 156 296 random 401;
+#X obj 156 333 / 100;
+#X floatatom 156 366 5 0 0 0 - - -;
+#X text 284 295 <- generates a random whole number between 0 and 400
+;
+#X text 242 332 <- divide by 100 to get a float between 0 - 4;
+#X text 181 107 <- generates a random whole number between 0 and 3
+;
+#X obj 184 517 random 4;
+#X text 292 519 <- generates a random whole number between 0 and 3
+;
+#X obj 184 559 + 1;
+#X floatatom 184 597 5 0 0 0 - - -;
+#X text 272 556 <- add 1 to change the range to 1 - 4;
+#X obj 130 245 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 155 452 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 156 258 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 184 478 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 9 0 11 0;
+#X connect 11 0 12 0;
+#X connect 16 0 3 0;
+#X connect 17 0 9 0;
+#X restore 126 573 pd random;
+#N canvas 57 22 1366 840 number_ranges 0;
+#X obj 226 379 moses 10;
+#X floatatom 226 344 5 0 0 0 - - -;
+#X floatatom 226 426 5 0 0 0 - - -;
+#X floatatom 311 426 5 0 0 0 - - -;
+#X floatatom 160 173 5 0 0 0 - - -;
+#X floatatom 160 252 5 0 0 0 - - -;
+#X floatatom 278 250 5 0 0 0 - - -;
+#X obj 160 205 split 10 40;
+#X floatatom 56 9 5 0 0 0 - - -;
+#X floatatom 56 92 5 0 0 0 - - -;
+#X obj 56 45 clip 0 100;
+#X text 196 45 <- only output a particular range of numbers;
+#X text 308 202 <- output a certain range to the left outlet \, everything
+else to the right;
+#X text 383 376 <- part a stream of numbers \, everything before the
+argument goes out the left outlet \, everything after out the right
+;
+#X obj 91 593 change;
+#X msg 86 522 1;
+#X msg 143 524 1;
+#X msg 192 524 1;
+#X msg 262 525 0;
+#X msg 324 525 9;
+#X obj 91 640 print;
+#X text 207 596 <- remove redundancy \, only output if number is different
+;
+#X floatatom 324 784 5 0 0 0 - - -;
+#X floatatom 393 784 5 0 0 0 - - -;
+#X msg 295 691 33 44;
+#X obj 340 737 swap;
+#X msg 392 683 55 22;
+#X text 463 733 <- swap numbers \, thus changing right to left order
+;
+#X obj 123 156 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 194 324 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 106 503 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 303 667 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 0 0 2 0;
+#X connect 0 1 3 0;
+#X connect 1 0 0 0;
+#X connect 4 0 7 0;
+#X connect 7 0 5 0;
+#X connect 7 1 6 0;
+#X connect 8 0 10 0;
+#X connect 10 0 9 0;
+#X connect 14 0 20 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X connect 17 0 14 0;
+#X connect 18 0 14 0;
+#X connect 19 0 14 0;
+#X connect 24 0 25 0;
+#X connect 25 0 22 0;
+#X connect 25 1 23 0;
+#X connect 26 0 25 0;
+#X restore 126 602 pd number_ranges;
+#X text 125 425 Math \, logic \, numbers;
+#N canvas 0 22 1550 1006 dataflow 0;
+#X obj 96 87 spigot;
+#X obj 159 28 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 96 25 5 0 0 0 - - -;
+#X floatatom 96 119 5 0 0 0 - - -;
+#X text 186 87 <- spigot is a gate that opens and close to let data
+pass or not;
+#X obj 275 318 select 10 11 12 13 14 15 16;
+#X floatatom 275 278 5 0 0 0 - - -;
+#X obj 275 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 317 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 359 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 401 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 443 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 485 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 527 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 569 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 223 256 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 226 404 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 111 435 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 111 510 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 111 466 delay 2000;
+#X text 197 491 <- delay \, delays a bang by the argument in ms;
+#X msg 763 566 hello;
+#X obj 763 536 prepend set;
+#X obj 763 500 pipe s 2000;
+#X msg 709 459 symbol hello;
+#X msg 977 460 symbol goodbye;
+#X text 911 504 <- pipe can do a similar thing for messages and numbers
+;
+#X obj 181 618 cnv 5 650 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 238 830 route 1 2 3 4 5;
+#X floatatom 238 670 5 0 0 0 - - -;
+#X floatatom 238 877 5 0 0 0 - - -;
+#X floatatom 302 877 5 0 0 0 - - -;
+#X floatatom 367 877 5 0 0 0 - - -;
+#X floatatom 431 877 5 0 0 0 - - -;
+#X floatatom 494 877 5 0 0 0 - - -;
+#X obj 238 756 pack 1 f;
+#X obj 238 712 t b f;
+#X floatatom 347 670 5 0 0 0 - - -;
+#X obj 347 712 t b f;
+#X floatatom 477 670 5 0 0 0 - - -;
+#X obj 477 712 t b f;
+#X floatatom 594 670 5 0 0 0 - - -;
+#X obj 594 712 t b f;
+#X floatatom 719 670 5 0 0 0 - - -;
+#X obj 719 712 t b f;
+#X obj 347 756 pack 2 f;
+#X obj 477 756 pack 3 f;
+#X obj 594 756 pack 4 f;
+#X obj 719 756 pack 5 f;
+#X text 500 834 <- route sorts based on the list's first element;
+#X floatatom 956 55 5 0 0 0 - - -;
+#X floatatom 915 144 5 0 0 0 - - -;
+#X obj 915 112 gate;
+#X text 745 175 In Pd-extended \, there is also gate which does the
+same thing (gate is the name given to this object in Max);
+#X text 614 311 <- select sends a bang when a value matches \, last
+outlet bangs when there is no match (useful for a sequencer);
+#X obj 915 54 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 5 0 7 0;
+#X connect 5 1 8 0;
+#X connect 5 2 9 0;
+#X connect 5 3 10 0;
+#X connect 5 4 11 0;
+#X connect 5 5 12 0;
+#X connect 5 6 13 0;
+#X connect 5 7 14 0;
+#X connect 6 0 5 0;
+#X connect 17 0 19 0;
+#X connect 19 0 18 0;
+#X connect 22 0 21 0;
+#X connect 23 0 22 0;
+#X connect 24 0 23 0;
+#X connect 25 0 23 0;
+#X connect 28 0 30 0;
+#X connect 28 1 31 0;
+#X connect 28 2 32 0;
+#X connect 28 3 33 0;
+#X connect 28 4 34 0;
+#X connect 29 0 36 0;
+#X connect 35 0 28 0;
+#X connect 36 0 35 0;
+#X connect 36 1 35 1;
+#X connect 37 0 38 0;
+#X connect 38 0 45 0;
+#X connect 38 1 45 1;
+#X connect 39 0 40 0;
+#X connect 40 0 46 0;
+#X connect 40 1 46 1;
+#X connect 41 0 42 0;
+#X connect 42 0 47 0;
+#X connect 42 1 47 1;
+#X connect 43 0 44 0;
+#X connect 44 0 48 0;
+#X connect 44 1 48 1;
+#X connect 45 0 28 0;
+#X connect 46 0 28 0;
+#X connect 47 0 28 0;
+#X connect 48 0 28 0;
+#X connect 50 0 52 1;
+#X connect 52 0 51 0;
+#X connect 55 0 52 0;
+#X restore 602 283 pd dataflow;
+#N canvas 0 22 1610 992 send+receive 0;
+#X obj 138 331 send float_data;
+#X floatatom 138 297 5 0 0 0 - - -;
+#X floatatom 121 411 5 0 0 0 - - -;
+#X obj 121 381 receive float_data;
+#X text 399 421 When we begin to discuss audio signals \, there are
+similar objects with the "~" designation: send~ and receive~;
+#X floatatom 972 235 5 0 0 0 - - -;
+#X floatatom 974 340 5 0 0 0 - - -;
+#X obj 972 268 s float_data;
+#X obj 974 310 r float_data;
+#X text 1137 282 <- you can abbreviate as well!;
+#X msg 73 632 \; float_data \$1;
+#X floatatom 73 599 5 0 0 0 - - -;
+#X text 253 633 <- \$1 is a variable replaced by the incoming number
+;
+#X obj 84 719 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 281 719 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 84 743 symbol float_data;
+#X obj 281 743 symbol more_data;
+#X floatatom 481 771 5 0 0 0 - - -;
+#X obj 481 741 receive more_data;
+#X msg 135 791 \; \$1 44;
+#X text 225 820 <- \$1 in this case allow us to make the send address
+the variable;
+#X obj 63 531 cnv 5 750 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 887 686 pack s f;
+#X floatatom 901 509 5 0 0 0 - - -;
+#X msg 887 721 \; \$1 \$2;
+#X msg 887 580 float_data;
+#X obj 841 530 cnv 5 5 300 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 901 541 t b f;
+#X floatatom 1017 513 5 0 0 0 - - -;
+#X obj 1017 545 t b f;
+#X msg 1017 579 more_data;
+#X text 1001 731 <- both as variables with Pd commands;
+#X text 69 543 You can also send data via Pd commands which are special
+message boxes having a semicolon at the beginning:;
+#X text 294 43 Pd patches can get very busy visually with connector
+lines crossing every which way. One way to reduce the chaos is by making
+good use of subpatches. Another is to use the send and receive objects.
+These allow you to make connections when distances are too great or
+too confusing. Send and receive objects need a name argument so that
+they know they are linked. They will even connect between multiple
+patches if you have identically named sends and receives - so beware
+of this!;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 5 0 7 0;
+#X connect 8 0 6 0;
+#X connect 11 0 10 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 19 0;
+#X connect 16 0 19 0;
+#X connect 18 0 17 0;
+#X connect 22 0 24 0;
+#X connect 23 0 27 0;
+#X connect 25 0 22 0;
+#X connect 27 0 25 0;
+#X connect 27 1 22 1;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 29 1 22 1;
+#X connect 30 0 22 0;
+#X restore 602 313 pd send+receive;
+#N canvas 62 48 1486 922 on_load 0;
+#X obj 122 35 loadbang;
+#X msg 122 88 1;
+#X obj 59 170 spigot;
+#X obj 122 120 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 59 112 5 0 0 0 - - -;
+#X floatatom 59 210 5 0 0 0 - - -;
+#X text 271 35 <- you can place loadbangs in your patch to initialize
+default states for your patches. In this case \, I'm using it to open
+a spigot when the patch initially loads;
+#X obj 258 231 cnv 5 750 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 540 407 receive param1;
+#X floatatom 540 436 5 0 0 0 - - -;
+#X floatatom 540 526 5 0 0 0 - - -;
+#X obj 540 497 receive param2;
+#X floatatom 709 435 5 0 0 0 - - -;
+#X floatatom 709 525 5 0 0 0 - - -;
+#X obj 709 406 receive param3;
+#X obj 709 496 receive param4;
+#X floatatom 882 435 5 0 0 0 - - -;
+#X floatatom 882 525 5 0 0 0 - - -;
+#X obj 882 406 receive param5;
+#X obj 882 496 receive param6;
+#X msg 182 437 \; param1 100 \; param2 200 \; param3 1 \; param4 1
+\; param5 44.3 \; param6 0.2;
+#X obj 182 393 loadbang;
+#X text 281 251 Loadbangs can be quite useful \, however a better strategy
+to handle default states (presets) can be accomplished with a Pd command
+to send data to several named recieves - like so (notice I've used
+one loadbang to send the defaults contained in a message rather than
+using six loadbangs):;
+#X text 671 687 In this way \, you are easily able to define multiple
+possibilities for the state of your patch - and quickly change the
+defaults if you should choose (easier than hunting for a zillion loadbangs
+scattered throughout your patch).;
+#X msg 345 440 \; param1 990 \; param2 2.2 \; param3 0 \; param4 1.2222
+\; param5 4004.3 \; param6 5.5;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 8 0 9 0;
+#X connect 11 0 10 0;
+#X connect 14 0 12 0;
+#X connect 15 0 13 0;
+#X connect 18 0 16 0;
+#X connect 19 0 17 0;
+#X connect 21 0 20 0;
+#X restore 602 343 pd on_load;
+#X text 602 255 Dataflow;
+#X text 165 34 This is a fast workshop....so we're going to skip a
+bunch of important things so that we can jump to making sound and building
+a synth a.s.a.p. I'll cover some of what's below as things come up.
+For later here's some subpatches to check out.;
+#X obj 481 641 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;

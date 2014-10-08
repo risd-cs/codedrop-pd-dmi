@@ -1,0 +1,12 @@
+#N canvas 341 103 1064 536 24;
+#X text 94 43 Built-in help...;
+#X text 171 106 For the built-in Pd manual \, in Pd-extended go to
+the Help menu and follow this path: Pd Help Browser... > Manuals. There
+you'll find tutorials. The first two tutorials: 0.Intro and 1.Sound
+will be useful to refresh things covered in this workshoph.;
+#X text 283 289 By going to Help -> Browser \, you'll notice there's
+a lot of examples to navigate through. Other recommended reading is
+under: Pd Help Browser > Pure Data > control.examples & audio.examples
+;
+#X obj 356 421 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;

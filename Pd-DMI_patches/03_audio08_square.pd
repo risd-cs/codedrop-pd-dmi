@@ -1,0 +1,43 @@
+#N canvas 246 22 1031 914 24;
+#X obj 122 337 dac~;
+#X obj 122 284 *~ 0.3;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array array_square1 100 float 0;
+#X coords 0 1 99 -1 200 140 1 0 0;
+#X restore 382 419 graph;
+#X obj 285 283 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 325 284 <- graph;
+#X msg 124 472 \; pd dsp \$1;
+#X obj 124 424 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 285 320 metro 50;
+#X obj 285 350 tabwrite~ array_square1;
+#X obj 122 144 pack f 200;
+#X obj 122 182 line~;
+#X floatatom 122 103 5 0 0 0 - - -;
+#N canvas 464 181 337 327 squareWave 0;
+#X obj 50 230 outlet~;
+#X obj 50 46 inlet~;
+#X obj 50 89 phasor~;
+#X obj 50 137 expr~ $v1 > 0.5;
+#X obj 50 173 expr~ $v1 * 2 - 1;
+#X obj 132 46 inlet;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 2 1;
+#X restore 122 226 pd squareWave;
+#X obj 103 626 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 1 0 8 0;
+#X connect 3 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 12 0;
+#X connect 11 0 9 0;
+#X connect 12 0 1 0;

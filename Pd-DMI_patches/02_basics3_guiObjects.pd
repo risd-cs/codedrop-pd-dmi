@@ -1,0 +1,42 @@
+#N canvas 31 22 1423 961 24;
+#X obj 306 188 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 306 252 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 306 318 nbx 5 50 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 30
+-204786 -258113 -258113 0 256;
+#X obj 110 314 vsl 50 300 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 187 551 hsl 300 50 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 548 388 vradio 50 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 611 389 hradio 50 1 0 10 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 479 329 <- numbox (a special GUI version of the regular number)
+;
+#X text 379 187 <- bang (bang means "do it" - simply outputs a message
+for an object to do what it's supposed to);
+#X text 378 260 <- toggle (outputs the number 1 or 0 \, on/off states)
+;
+#X floatatom 110 650 5 0 0 0 - - -;
+#X floatatom 184 613 5 0 0 0 - - -;
+#X floatatom 548 798 5 0 0 0 - - -;
+#X floatatom 611 466 5 0 0 0 - - -;
+#X text 67 35 Let's take a look at a few more of the items under the
+Put menu. These are GUI (Graphic User Interface) objects that help
+in the contruction and playing of programs. Take a look under the Put
+menu and notice these items also have key commands for instantiating
+them. Time-saver!;
+#X text 190 509 <- sliders;
+#X text 677 496 <- radio buttons;
+#X text 745 646 One more thing to try \, before moving on. Right click
+(or ctrl-click) and go to Properties and notice that you can change
+aspects of these objects in terms of the data passed and/or their color
+and size.;
+#X obj 748 846 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
+#X connect 3 0 10 0;
+#X connect 4 0 11 0;
+#X connect 5 0 12 0;
+#X connect 6 0 13 0;

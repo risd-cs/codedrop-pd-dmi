@@ -1,0 +1,25 @@
+#N canvas 321 86 1112 778 24;
+#X obj 467 380 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 467 474 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X obj 467 439 metro 1000;
+#X text 47 17 Welcome to the \; DMI (Digital Music Instrument) patching
+with Pd code drop \; If you are reading this \, then you have Pd installed
+\; Double-check that you are running Pd-extended \; (not Pd vanilla)
+;
+#X obj 34 718 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
+#X text 564 176 Here's a "hello world" example \; Click on the message
+"hello world" \; You should see it print to the Pd Window;
+#X msg 212 177 hello world;
+#X obj 312 287 print;
+#X msg 341 224 hello whirrled;
+#X text 158 598 OK - let's patch these ourselves \; This will require
+switching between "edit" & "run" modes;
+#X text 635 395 Here's a control example \; Click on the box \; It's
+a "toggle";
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 6 0 7 0;
+#X connect 8 0 7 0;

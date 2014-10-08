@@ -1,0 +1,46 @@
+#N canvas 60 79 1054 771 24;
+#X obj 293 468 dac~;
+#X msg 53 101 \; pd dsp \$1;
+#X obj 53 48 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 292 180 osc~ 440;
+#X text 90 49 <- turn on sound;
+#X obj 424 318 line~;
+#X obj 293 379 *~;
+#X obj 424 276 pack f 20;
+#X floatatom 424 243 5 0 0 0 - - -;
+#X obj 292 140 line~;
+#X floatatom 292 3 5 0 0 0 - - -;
+#X obj 295 -48 hsl 200 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7000 1;
+#X obj 292 52 * 1000;
+#X floatatom 399 52 5 0 0 0 - - -;
+#X text 506 -49 <- hslider for a GUI;
+#X text 469 51 <- adjust the glide between freq.;
+#X obj 292 98 pack f 200;
+#X text 370 138 <- line~ enables signal control over the osc~ freq.
+;
+#X floatatom 520 244 5 0 0 0 - - -;
+#X text 588 245 <- adjust ramp for volume changes;
+#X text 492 316 <- line~ enables signal control over volume;
+#X text 82 -97 A BETTER OSCILLATOR MODULE;
+#X obj 38 538 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
+#X obj 427 206 hsl 200 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7400 1;
+#X text 638 205 <- hslider for a GUI;
+#X connect 2 0 1 0;
+#X connect 3 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 0 0;
+#X connect 6 0 0 1;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 3 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 16 0;
+#X connect 13 0 16 1;
+#X connect 16 0 9 0;
+#X connect 18 0 7 1;
+#X connect 23 0 8 0;

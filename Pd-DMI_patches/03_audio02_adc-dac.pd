@@ -1,0 +1,26 @@
+#N canvas 77 22 1466 984 24;
+#X obj 98 57 dac~;
+#X obj 77 289 dac~ 1 2 3 4 5 6 7 8;
+#X obj 274 472 adc~;
+#X obj 384 648 adc~ 1 2 3 4 5 6 7 8;
+#X text 343 282 <- by default \, the dac~ has two inlets (for stereo
+sound). It is possible to have a dac~ with many more outlets but you
+will need an audio device that supports more outputs. Here you see
+a dac~ with 8 outlets (or 8-channels).;
+#X text 658 649 <- by default \, the adc~ has two inlets (for stereo
+input). It is possible to have many more inlets provided your audio
+device supports it. Here we see an adc~ with 8 inlets (or 8-channels).
+;
+#X text 182 50 <- to get sound out to your speakers \, you will need
+the dac~ object. The dac~ is the Digital to Analog Converter. This
+enables the computer to take our digital information and send it to
+an amplfier/loudspeaker combination where it is converted to analog
+pressure waves that we can hear. Notice the ~ sign at the end of the
+object name. This indicates that this object works with audio signals.
+;
+#X text 345 469 <- just as we have a dac~ \, we also have an adc~ (Analog
+to Digital Converter). This allows us to take an an audio input (line
+or microphone input) and convert it into digital information that can
+be processed in Pd.;
+#X obj 112 818 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
