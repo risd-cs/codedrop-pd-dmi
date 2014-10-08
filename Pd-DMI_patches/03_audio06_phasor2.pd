@@ -1,4 +1,4 @@
-#N canvas 499 104 1086 888 24;
+#N canvas 132 22 1086 888 24;
 #X obj 292 468 dac~;
 #X msg 53 101 \; pd dsp \$1;
 #X obj 53 48 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1

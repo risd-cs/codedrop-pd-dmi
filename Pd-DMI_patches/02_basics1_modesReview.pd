@@ -1,4 +1,4 @@
-#N canvas 157 23 1318 717 24;
+#N canvas 91 22 1318 717 24;
 #X text 593 392 This text that you are reading is a "comment \, " one
 of the 5 primary items you'll see under the "Put" menu. Notice the
 key commands for each \, which will make your patching experience much

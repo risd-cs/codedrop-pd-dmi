@@ -1,10 +1,10 @@
-#N canvas 175 41 1560 865 24;
+#N canvas 21 22 1560 865 24;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array waveform_array2 2051 float 0;
 #X coords 0 1 2050 -1 200 140 1;
 #X restore 334 -111 graph;
 #X msg 324 517 \; pd dsp \$1;
-#X obj 324 469 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 324 469 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 103 484 dac~;
 #N canvas 0 22 771 392 vol 0;
@@ -22,10 +22,10 @@
 #X restore 103 406 pd vol;
 #X floatatom 166 373 5 0 1 0 - - -;
 #X obj 169 325 hsl 128 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6500 1;
+-1 -1 0 1;
 #X text 312 329 volume;
 #X obj 52 -114 hsl 128 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2900 1;
+-1 -1 0 1;
 #X text 186 -108 frequency;
 #X obj 49 59 phasor~;
 #X obj 49 93 *~ 2051;

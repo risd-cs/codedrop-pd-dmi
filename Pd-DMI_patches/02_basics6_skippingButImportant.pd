@@ -1,4 +1,4 @@
-#N canvas 405 40 1068 957 24;
+#N canvas 128 22 1068 957 24;
 #N canvas 117 22 1401 945 print 0;
 #X obj 41 186 print;
 #X msg 41 139 any message;
@@ -454,7 +454,7 @@ conversion);
 #X connect 42 0 35 0;
 #X connect 42 1 36 0;
 #X restore 126 483 pd arithmetic;
-#N canvas 34 22 1564 1001 relational 1;
+#N canvas 34 22 1564 1001 relational 0;
 #X floatatom 21 17 5 0 0 0 - - -;
 #X floatatom 108 24 5 0 0 0 - - -;
 #X obj 43 93 ==;

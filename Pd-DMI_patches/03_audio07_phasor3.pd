@@ -1,4 +1,4 @@
-#N canvas 166 56 1413 966 24;
+#N canvas 70 22 1413 966 24;
 #X obj 375 639 dac~;
 #X msg 85 409 \; pd dsp \$1;
 #X obj 85 364 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -11,7 +11,7 @@
 #X obj 374 311 line~;
 #X floatatom 374 204 5 0 0 0 - - -;
 #X obj 377 167 hsl 200 30 0 1 0 0 empty empty frequency -2 -8 0 10
--262144 -1 -1 8200 1;
+-262144 -1 -1 0 1;
 #X obj 374 237 * 1000;
 #X floatatom 481 237 5 0 0 1 glide - -;
 #X obj 374 269 pack f 200;
@@ -22,7 +22,7 @@
 #X obj 374 471 clip~ -0.6 0.35;
 #X floatatom 813 241 5 0 0 0 - - -;
 #X floatatom 1022 193 5 0 0 0 - - -;
-#N canvas 0 22 1001 639 array_viz 1;
+#N canvas 0 22 1001 639 array_viz 0;
 #X obj 231 235 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #N canvas 0 22 450 300 (subpatch) 0;
@@ -33,7 +33,7 @@
 #X obj 231 204 metro 100;
 #X obj 109 196 inlet~;
 #X obj 231 278 tabwrite~ phasormod_array;
-#X obj 231 143 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 231 143 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X connect 0 0 5 0;
 #X connect 3 0 0 0;
@@ -43,11 +43,11 @@
 #X obj 141 843 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
 #X obj 759 378 hsl 200 30 0 1 0 0 empty empty volume -2 -8 0 10 -262144
--1 -1 3200 1;
+-1 -1 0 1;
 #X obj 816 155 hsl 200 30 -1 0 0 0 empty empty -1-0 -2 -8 0 10 -262144
--1 -1 7700 1;
+-1 -1 0 1;
 #X obj 1025 155 hsl 200 30 0 1 0 0 empty empty 0-1 -2 -8 0 10 -262144
--1 -1 19900 1;
+-1 -1 0 1;
 #X text 46 26 GETTING OTHER WAVEFORM TYPES - A stronger phasor~. now
 with clip~ added. You can sculpt the waveform a bit this way limiting
 the range for the peaks and troughs. Notice as they both approach 0

@@ -1,4 +1,4 @@
-#N canvas 165 22 1256 932 24;
+#N canvas 156 22 1256 932 24;
 #X obj 94 148 metro;
 #X text 164 146 <- here is an object;
 #X msg 94 187 hello;

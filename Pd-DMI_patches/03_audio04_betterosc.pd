@@ -1,4 +1,4 @@
-#N canvas 421 89 1054 771 24;
+#N canvas 190 22 1054 771 24;
 #X obj 293 468 dac~;
 #X msg 53 101 \; pd dsp \$1;
 #X obj 53 48 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -12,7 +12,7 @@
 #X obj 292 140 line~;
 #X floatatom 292 3 5 0 0 0 - - -;
 #X obj 295 -48 hsl 200 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4800 1;
+-1 -1 0 1;
 #X obj 292 52 * 1000;
 #X floatatom 399 52 5 0 0 0 - - -;
 #X text 506 -49 <- hslider for a GUI;
@@ -27,7 +27,7 @@
 #X obj 38 538 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
 #X obj 427 206 hsl 200 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3800 1;
+-1 -1 0 1;
 #X text 638 205 <- hslider for a GUI;
 #X text 425 98 <- pack is handy for formatting a message;
 #X obj 71 227 prepend set;

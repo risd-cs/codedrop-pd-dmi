@@ -1,4 +1,4 @@
-#N canvas 245 115 1234 848 24;
+#N canvas 142 22 1234 848 24;
 #X obj 137 367 dac~;
 #X obj 137 314 *~ 0.3;
 #N canvas 0 22 450 300 (subpatch) 0;

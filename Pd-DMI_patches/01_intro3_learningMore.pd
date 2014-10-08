@@ -1,4 +1,4 @@
-#N canvas 107 71 1331 651 24;
+#N canvas 94 22 1331 651 24;
 #X obj 606 236 pddp/pddplink http://puredata.info/;
 #X obj 708 268 pddp/pddplink http://puredata.info/community/lists;
 #X obj 263 398 pddp/pddplink http://en.flossmanuals.net/PureData/;

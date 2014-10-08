@@ -22,10 +22,10 @@
 #X restore 229 351 pd vol;
 #X floatatom 292 318 5 0 1 0 - - -;
 #X obj 295 270 hsl 128 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2500 1;
+-1 -1 0 1;
 #X text 435 274 volume;
 #X obj 233 -18 hsl 128 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3000 1;
+-1 -1 0 1;
 #X text 368 -16 frequency;
 #X text 47 -114 using sinesum messages to generate wavetables;
 #X obj 230 154 phasor~;

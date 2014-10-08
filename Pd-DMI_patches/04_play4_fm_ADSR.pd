@@ -1,6 +1,6 @@
-#N canvas 99 116 1620 975 24;
+#N canvas 40 23 1620 975 24;
 #X msg 249 454 \; pd dsp \$1;
-#X obj 249 406 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 249 406 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 407 476 dac~;
 #N canvas 0 22 771 392 vol 0;
@@ -18,7 +18,7 @@
 #X restore 407 398 pd vol;
 #X floatatom 470 364 5 0 1 0 - - -;
 #X obj 473 322 hsl 128 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5800 1;
+-1 -1 0 1;
 #X text 606 325 volume;
 #X obj 407 323 *~;
 #N canvas 144 31 1180 739 (subpatch) 0;
