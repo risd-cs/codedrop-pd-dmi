@@ -1,10 +1,6 @@
 #N canvas 107 71 1331 651 24;
 #X obj 606 236 pddp/pddplink http://puredata.info/;
 #X obj 708 268 pddp/pddplink http://puredata.info/community/lists;
-#X obj 529 455 pddp/pddplink http://crca.ucsd.edu/~msp/Pd_documentation/
-;
-#X obj 591 484 pddp/pddplink http://crca.ucsd.edu/~msp/techniques.htm
-;
 #X obj 263 398 pddp/pddplink http://en.flossmanuals.net/PureData/;
 #X obj 547 427 pddp/pddplink http://en.flossmanuals.net/pure-data/ch072_introduction/
 ;
@@ -25,3 +21,6 @@
 #X text 153 357 Also worth checking out:;
 #X obj 696 577 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
+#X obj 529 455 pddp/pddplink http://msp.ucsd.edu/Pd_documentation/
+;
+#X obj 591 484 pddp/pddplink http://msp.ucsd.edu/techniques.htm;

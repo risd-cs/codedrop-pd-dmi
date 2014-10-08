@@ -4,7 +4,7 @@
 #X text 457 655 <-- click these;
 #X text 23 580 Fourth. You can turn on/off sound with Pd command messages
 \, like so:;
-#X text 27 105 First. Under the Pd-extended menu \, check this path
+#X text 415 121 First. Under the Pd-extended menu \, check this path
 Preferences -> Audio Settings. Here you'll see your default input/output
 device \, sampling rate \, and so forth. For now \, you will probably
 not need to change anything - but if you are using an audio device
@@ -17,8 +17,6 @@ inside your patch.;
 #X msg 867 575 \; pd dsp \$1;
 #X obj 867 536 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 29 14 Pd is strongly suited for real-time audio synthesis and
-audio signal processing.;
 #X text 24 289 Second. Let's make sure your audio works. Under the
 Media menu \, there is a selection for "Test Audio and MIDI \, " go
 ahead and select that item. In that patch you'll see a 3 position radio
@@ -28,4 +26,8 @@ notice you can turn sound on and off by checking the "compute audio"
 box.;
 #X obj 144 828 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
+#X text 29 14 Pd is strongly suited for real-time audio synthesis and
+audio signal processing. It can be used as the audio engine for mobile
+apps (using libPd). It also runs quite well in embedded computing situations
+(e.g. Raspberry Pi \, BeagleBoard XM \, & UDOO).;
 #X connect 9 0 8 0;

@@ -454,7 +454,7 @@ conversion);
 #X connect 42 0 35 0;
 #X connect 42 1 36 0;
 #X restore 126 483 pd arithmetic;
-#N canvas 34 22 1564 1001 relational 0;
+#N canvas 34 22 1564 1001 relational 1;
 #X floatatom 21 17 5 0 0 0 - - -;
 #X floatatom 108 24 5 0 0 0 - - -;
 #X obj 43 93 ==;
@@ -493,7 +493,7 @@ conversion);
 #X obj 1010 43 <=;
 #X obj 1056 43 <;
 #X obj 962 43 !=;
-#X text 824 16 THE RELATIONAL OPERATORS;
+#X text 824 12 THE RELATIONAL OPERATORS;
 #X obj 1101 43 mod;
 #X obj 1150 43 div;
 #X floatatom 161 470 5 0 0 0 - - -;
@@ -567,7 +567,7 @@ from the otherbinops-help.pd patch included in Pd-extended);
 #X obj 906 78 <<;
 #X obj 950 78 >>;
 #X obj 1085 78 %;
-#X text 813 55 THE LOGICAL OPERATORS;
+#X text 813 49 THE LOGICAL OPERATORS;
 #X obj 112 124 &&;
 #X floatatom 105 83 5 0 0 0 - - -;
 #X floatatom 184 77 5 0 0 0 - - -;
@@ -949,9 +949,9 @@ scattered throughout your patch).;
 #X connect 21 0 20 0;
 #X restore 602 343 pd on_load;
 #X text 602 255 Dataflow;
-#X text 165 34 This is a fast workshop....so we're going to skip a
-bunch of important things so that we can jump to making sound and building
-a synth a.s.a.p. I'll cover some of what's below as things come up.
-For later here's some subpatches to check out.;
 #X obj 481 641 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
+#X text 165 34 This is a fast workshop....so we're going to skip a
+bunch of important things so that we can jump to making sound and building
+a synth. I'll cover some of what's below as things come up. For later
+here's some subpatches to check out.;

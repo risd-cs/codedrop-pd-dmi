@@ -21,9 +21,9 @@ these inlets/outlets appear on the pd subpatch object (open or filled).
 called "pd." You simply create a new object called "pd" with a creation
 argument of whatever you'd like to call the subpatch. To see the contents
 \, just click once on it in Play mode.;
+#X obj 594 659 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
+;
 #X text 175 390 For many of the examples to follow \, there will be
 subpatches nested within parent patches. Just click these in Play mode
 to see the contents. Try making your own subpatch with inlets and outlets.
-Subpathes help to keep things readable.;
-#X obj 594 659 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
-;
+Subpatches help to keep things readable.;

@@ -18,8 +18,7 @@ Help. You'll see a helpful list of the basic objects for Pd.;
 #X text 161 357 You'll notice that these items have little rectangles
 in some of the corners. These are "inlets" and "outlets \, " and represent
 the points at which connections can be made between items.;
-#X text 213 25 Next \, let's take a look at the primary items under
-the "Put" menu. We'll work with four of them for now (disregard symbol).
-;
 #X obj 113 826 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
+#X text 213 25 The primary text entities are under the "Put" menu.
+We'll work with four of them for now (disregard symbol).;

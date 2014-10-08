@@ -23,11 +23,6 @@ for an object to do what it's supposed to);
 #X floatatom 184 613 5 0 0 0 - - -;
 #X floatatom 548 798 5 0 0 0 - - -;
 #X floatatom 611 466 5 0 0 0 - - -;
-#X text 67 35 Let's take a look at a few more of the items under the
-Put menu. These are GUI (Graphic User Interface) objects that help
-in the contruction and playing of programs. Take a look under the Put
-menu and notice these items also have key commands for instantiating
-them. Time-saver!;
 #X text 190 509 <- sliders;
 #X text 677 496 <- radio buttons;
 #X text 745 646 One more thing to try \, before moving on. Right click
@@ -36,6 +31,10 @@ aspects of these objects in terms of the data passed and/or their color
 and size.;
 #X obj 748 846 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
+#X text 67 35 A few more of the items under the Put menu: GUI (Graphic
+User Interface) objects that help in the contruction and playing of
+programs. Take a look under the Put menu and notice these items also
+have key commands for instantiating them.;
 #X connect 3 0 10 0;
 #X connect 4 0 11 0;
 #X connect 5 0 12 0;

@@ -6,18 +6,21 @@ surface or gestural controller \, which drives the musical parameters
 of a sound synthesizer in real time." (Miranda and Wanderley. 2006
 New Digital Musical Instruments. A-R Editions \, Inc.);
 #X text 737 659 Part 4: Open experimentation time \; (30+ min.);
-#X text 228 253 This workshop will be a fast introduction to DMI design.
-We'll be building a fairly simple synthesizer and electronic circuits
-that will let us map gestural control to changes in sound.;
 #X obj 74 758 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
-#X text 270 388 Part 1: Up and running with Pd \, audio fundamentals
-\, building a synthesizer \; (~30 min.);
 #X text 650 761 PLUG - I'll be teaching a Wintersession course called
 \; Programming Sound: Performance Systems (IDISC-1528) \; The course
 will feature Pd and the Livid board \; 5-weeks to build DMIs with a
 concert at the end!;
-#X text 454 466 Part 2: Livid board overview \, connecting buttons
-\, pots \, sensors \, LEDs \; (~15 min.);
 #X text 586 565 Part 3: Putting the two together with MIDI + highlights
 from s3g_Pd abstractions if time \; (~15 min.);
+#X text 270 387 Part 1: Up and running with Pd \, audio fundamentals
+\, building a synthesizer together \; (~30 min.);
+#X text 454 466 Part 2: Livid board overview \, resetting to defaults
+\, connecting buttons \, pots \, sensors \, LEDs \; (~15 min.);
+#X text 145 216 This workshop will be a fast introduction to DMI design.
+We'll be building a fairly simple synthesizer and electronic circuits
+that will let us map gestural control to changes in sound. Mainly we're
+focussing on NOT using off-the-shelf MIDI interfaces (like keyboards
+or knob controllers) \, but everything discussed will apply to them.
+;

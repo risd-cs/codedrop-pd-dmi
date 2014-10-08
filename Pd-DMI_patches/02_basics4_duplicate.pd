@@ -16,9 +16,9 @@ can place things strangely and partly because the Duplicate command
 is just one step faster. Try both on the objects below \, then try
 using Copy/Paste from the help patch of metro. Keep in mind that if
 you modify a help patch - don't save it!;
-#X text 587 631 Note: Good patching practice is to arrange your objects
-so that the dataflow is from the top-down \, and from right-to-left.
-Avoid lines overlapping objects as much as possible (for the sake of
-readability).;
 #X obj 283 901 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
+#X text 587 631 Note: Good patching practice is to arrange your objects
+so that the dataflow is from the top-down \, and from right-to-left.
+Avoid connecting-lines overlapping objects as much as possible (for
+the sake of readability).;
