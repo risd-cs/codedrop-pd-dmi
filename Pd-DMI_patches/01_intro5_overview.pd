@@ -9,11 +9,15 @@ New Digital Musical Instruments. A-R Editions \, Inc.);
 #X text 228 253 This workshop will be a fast introduction to DMI design.
 We'll be building a fairly simple synthesizer and electronic circuits
 that will let us map gestural control to changes in sound.;
-#X text 270 388 Part 1: Up and running with Pd \, building a synthesizer
-\; (~30 min.);
-#X text 454 466 Part 2: Livid board overview \, connecting buttons
-\, pots \, sensors \, LEDs \; (15 min.);
-#X text 586 565 Part 3: Putting the two together with MIDI + extras
-and other directions \; (15 min.);
 #X obj 74 758 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
+#X text 270 388 Part 1: Up and running with Pd \, audio fundamentals
+\, building a synthesizer \; (~30 min.);
+#X text 650 761 PLUG - I'll be teaching a Wintersession course called
+\; Programming Sound: Performance Systems (IDISC-1528) \; The course
+will feature Pd and the Livid board \; 5-weeks to build DMIs with a
+concert at the end!;
+#X text 454 466 Part 2: Livid board overview \, connecting buttons
+\, pots \, sensors \, LEDs \; (~15 min.);
+#X text 586 565 Part 3: Putting the two together with MIDI + highlights
+from s3g_Pd abstractions if time \; (~15 min.);
