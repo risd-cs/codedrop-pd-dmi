@@ -5,22 +5,23 @@ be called a digital music instrument (DMI) and consists of a control
 surface or gestural controller \, which drives the musical parameters
 of a sound synthesizer in real time." (Miranda and Wanderley. 2006
 New Digital Musical Instruments. A-R Editions \, Inc.);
-#X text 737 659 Part 4: Open experimentation time \; (30+ min.);
 #X obj 74 758 pddp/pddplink https://github.com/risd-cs/codedrop-pd-dmi
 ;
-#X text 650 761 PLUG - I'll be teaching a Wintersession course called
+#X text 624 730 PLUG - I'll be teaching a Wintersession course called
 \; Programming Sound: Performance Systems (IDISC-1528) \; The course
 will feature Pd and the Livid board \; 5-weeks to build DMIs with a
 concert at the end!;
-#X text 586 565 Part 3: Putting the two together with MIDI + highlights
-from s3g_Pd abstractions if time \; (~15 min.);
-#X text 270 387 Part 1: Up and running with Pd \, audio fundamentals
-\, building a synthesizer together \; (~30 min.);
-#X text 454 466 Part 2: Livid board overview \, resetting to defaults
-\, connecting buttons \, pots \, sensors \, LEDs \; (~15 min.);
 #X text 145 216 This workshop will be a fast introduction to DMI design.
-We'll be building a fairly simple synthesizer and electronic circuits
-that will let us map gestural control to changes in sound. Mainly we're
-focussing on NOT using off-the-shelf MIDI interfaces (like keyboards
-or knob controllers) \, but everything discussed will apply to them.
-;
+We'll be building a fairly simple synthesizer and (time-permitting)
+electronic circuits that will let us map gestural control to changes
+in sound. Mainly we're focussing on NOT using off-the-shelf MIDI interfaces
+(like keyboards or knob controllers) \, but everything discussed will
+apply to them.;
+#X text 270 387 Part 1: Up and running with Pd \, audio fundamentals
+\, building a synthesizer \; (~45 min.);
+#X text 452 467 Part 2: Livid board overview \, resetting to defaults
+\, connecting buttons \, pots \, sensors \, LEDs (see "slides-IO" folder
+for images) \, hooking into Pd with MIDI objects \;;
+#X text 453 533 (~15 min.);
+#X text 617 576 Part 3: Open experimentation time + highlights from
+s3g_Pd abstractions (at github.com/s3g) \; (~30 min.);
