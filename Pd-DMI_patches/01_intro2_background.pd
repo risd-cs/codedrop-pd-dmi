@@ -12,14 +12,6 @@ like a "black box machine." When patching \, you only need to worry
 about the input and output of these objects (which we could also call
 functions and are often called "externals" by the Max & Pd community).
 ;
-#X text 531 217 There are hundreds of objects in the popular distribution
-of Pd \, known as Pd-extended. You can even code objects yourself \,
-so Pd is great environment for running your own bit of code. Objects
-are mostly in C \, but Lua is a cool alternative that can be used for
-some things. You can also create your own libraries of "abstractions"
-which are sub-patches you plan to use alot. These work like objects
-\, but are created with Pd. I have a bunch of abstractions you can
-try. More later.;
 #X text 454 548 Pd was created by Miller Puckette in the mid-90s \,
 as an open source project. It is a part of a family of patcher programming
 languages \, the most famous of which is it's commercial cousin Max/MSP
@@ -27,3 +19,11 @@ languages \, the most famous of which is it's commercial cousin Max/MSP
 program developed in the 1980s. The program 'Max' was named Max Mathews
 . Max Mathews' Music N languages were the basis for many of today's
 computer music programming languages.;
+#X text 531 217 There are hundreds of objects in the popular distribution
+of Pd \, known as Pd-extended. You can even code objects yourself \,
+so Pd is a great environment for running your own bits of code. Objects
+are mostly in C \, but Lua is a cool alternative that can be used for
+some things. You can also create your own libraries of "abstractions"
+which are sub-patches you plan to use alot. These work like objects
+\, but are created with Pd. I have a bunch of abstractions you can
+try. More later.;

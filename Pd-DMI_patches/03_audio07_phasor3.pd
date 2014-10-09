@@ -48,8 +48,8 @@
 -1 -1 0 1;
 #X obj 1025 155 hsl 200 30 0 1 0 0 empty empty 0-1 -2 -8 0 10 -262144
 -1 -1 0 1;
-#X text 46 26 GETTING OTHER WAVEFORM TYPES - A stronger phasor~. now
-with clip~ added. You can sculpt the waveform a bit this way limiting
+#X text 46 26 GETTING OTHER WAVEFORM TYPES - A stronger phasor~ \,
+now with clip~ added. You can sculpt the waveform a bit this way limiting
 the range for the peaks and troughs. Notice as they both approach 0
 \, the waveform has no volume.;
 #X connect 2 0 1 0;
