@@ -16,6 +16,6 @@ To participate: download and install Pd-extended (http://puredata.info) and brin
 * Livid board and electronics provided by Code Studio
 * BYO USB MIDI controller if you have one
 * Patches from the session will be available at https://github.com/risd-cs/
-* Shawn’s Wintersession 2015 course, Programming Sound: Performance Systems, is now on Web Advisor (IDISC-1528), description at https://github.com/risd-ps/ws15_programmingsound
+* Shawn’s Wintersession 2015 course, Programming Sound: Performance Systems, is now on Web Advisor (IDISC-1528), description at https://github.com/risd-sound/ws15_programmingsound
 * Shawn’s public Pd patches and libraries at https://github.com/s3g/s3g_Pd
 
